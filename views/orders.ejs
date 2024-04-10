@@ -1,0 +1,113 @@
+<%- include('header',{title:'orders'}); -%>
+
+    <body class="sidebar-mini" id="sidebar-mini">
+        <div class="wrapper">
+            <div class="preloader flex-column justify-content-center align-items-center">
+                <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            </div>
+
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="setnav()" data-widget="pushmenu" href="#" role="button"><i
+                                class="fas fa-bars"></i></a>
+                    </li>
+                    <!-- <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index3.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Contact</a>
+                </li> -->
+                </ul>
+            </nav>
+            <!-- Navbar -->
+
+            <!-- /.navbar -->
+
+            <%- include('common/navlinks',{title:'orders'}); -%>
+
+                <!-- Content Wrapper. Contains page content -->
+                <div class="content-wrapper">
+                    <!-- Content Header (Page header) -->
+                    <section class="content-header">
+                        <div class="container-fluid">
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <h1>Orders</h1>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ol class="breadcrumb float-sm-right">
+                                    </ol>
+                                </div>
+                            </div>
+                        </div><!-- /.container-fluid -->
+                    </section>
+
+                    <!-- Main content -->
+                    <section class="content">
+                        <div class="card">
+
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table" id="myTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Sno.</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Etihad guest number</th>
+                                            <th scope="col">Token Id</th>
+                                            <th scope="col">Payment Status</th>
+                                            <th scope="col">Transaction Id</th>
+                                            <th scope="col">Reservation Id</th>
+                                            <th scope="col">Created At</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% data.forEach((e,index)=> { %>
+                                            <tr>
+                                                <th scope="row">
+                                                    <%= index+1 %>
+                                                </th>
+                                                <td>
+                                                    <%= e.name %>
+                                                </td>
+                                                <td>
+                                                    <%= e.email %>
+                                                </td>
+                                                <td>
+                                                    <%= e.Etihad_guest_number %>
+                                                </td>
+                                                <td>
+                                                    <%= e.order_id %>
+                                                </td>
+                                                <td>
+                                                    <%= e.order_type %>
+                                                </td>
+                                                <td>
+                                                    <%= e.transaction_id %>
+                                                </td>
+                                                <td>
+                                                    <%= e.reservation_id %>
+                                                </td>
+                                                <td>
+                                                    <%= new Date(e.created_at).toUTCString() %>
+                                                </td>
+                                            </tr>
+                                            <%})%>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </section>
+                    <!-- /.content -->
+                </div>
+        </div>
+
+
+
+        <%- include('footer'); -%>

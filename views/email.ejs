@@ -1,0 +1,257 @@
+<%- include('header',{title:'email'}); -%>
+
+<body class="sidebar-mini" id="sidebar-mini">
+  <div class="wrapper">
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" onclick="setnav()" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <!-- <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index3.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Contact</a>
+                </li> -->
+      </ul>
+    </nav>
+    <!-- Navbar -->
+    <!-- /.navbar -->
+    <%- include('common/navlinks',{title:'email'}); -%>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Email</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <div class="card">
+          <!-- /.card-header -->
+          <div class="card-body">
+            <% if(typeof error !== 'undefined'){ %>
+            <div class="alert alert-danger">
+              <%= error %>
+            </div>
+            <% } %>
+            <% if(typeof message !== 'undefined'){ %>
+            <div class="alert alert-success">
+              <%= message %>
+            </div>
+            <% } %>
+            <form action="/email" method="POST">
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="text" name="_sender" readonly class="form-control-plaintext" id="staticEmail" value="info@arcube.org">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label">Receivers</label>
+                <div class="col-sm-10">
+                  <input type="text" name="_receivers" class="form-control" id="staticEmail">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Subject</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="_subject" placeholder="Subject">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Example textarea</label>
+                <div class="col-sm-10">
+                  <!DOCTYPE html>
+                  <html>
+
+                    <head>
+                      <title>Arcube</title>
+                    </head>
+
+                    <body>
+                      <div>
+                        <center>
+                          <div>
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#000000">
+                              <tbody>
+                                <tr>
+                                  <td valign="top" bgcolor="#000000" width="100%">
+                                    <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+                                      <tbody>
+                                        <tr>
+                                          <td width="100%">
+                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                              <tbody>
+                                                <tr>
+                                                  <td>
+                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px" align="center">
+                                                      <tbody>
+                                                        <tr>
+                                                          <!-- this table contains prety much all the main features of the add: title/paragraphs/buttons/ buttom text and pedings -->
+                                                          <td style="padding:36px 0px 0px 0px;color:#000000;text-align:left" bgcolor="#000000" width="100%" align="left">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="display:none!important;color:transparent;min-height:0;width:0">
+                                                            </table>
+                                                            <!-- title -->
+                                                      <tbody>
+                                                        <tr>
+                                                          <td style="font-size:6px;line-height:10px;padding:0px 0px 0px 0px" valign="top" align="center">
+                                                            <img border="0" style="display:block;color:rgb(0,0,0);text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;width:600px;max-width:800px" alt="" src="https://arcubebucket1.s3.us-east-2.stackpathstorage.com/emailbanner-presale.png" class="CToWUd">
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td style="font-size:6px;line-height:10px;padding:0px 5px 0px 5px" valign="top" align="center">
+                                                              <img border="0" style="display:block;color:rgb(0,0,0);text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;width:600px;max-width:800px" alt="" src="https://arcubebucket1.s3.us-east-2.stackpathstorage.com/etihadxarcube-monochrome.png" class="CToWUd a6T" tabindex="0">
+                                                              <div class="a6S" dir="ltr" style="opacity: 0.01; left: 557px; top: 692.859px;">
+                                                                <div id=":io" class="T-I J-J5-Ji aQv T-I-ax7 L3 a5q" role="button" tabindex="0" aria-label="Descarcă atașamentul " data-tooltip-class="a1V" data-tooltip="Descarcă">
+                                                                  <div class="akn">
+                                                                    <div class="aSK J-J5-Ji aYr"></div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td style="padding:0px 0px 5px 0px">
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                      <!-- The 3 highlighted paragraphs/ pictures are here -->
+                                                      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td style="font-size:6px;line-height:0px;" valign="top" align="center">
+                                                              <a href="https://arcube.io" style="text-decoration: none;">
+                                                                <p border="0" style="color:white;font-weight: bold;font-family:Helvetica;font-size:18px;max-width:800px" class="CToWUd">ARCUBE.IO</p>
+                                                              </a></td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                      <!-- Until here -->
+                                                      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td style="padding:0px 0px 5px 0px">
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                      <!-- buttom text is here -->
+                                                      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td style="padding:18px 0px 18px 0px;line-height:20px;text-align:inherit" height="100%" valign="top">
+                                                              <div>
+                                                                <div style="font-family:inherit;text-align:center"><br></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:18px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Dear Etihad Guest,</span></div>
+                                                                <div style="font-family:inherit;text-align:center"><br></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Congratulations on reserving a limited edition NFT in the</span><a title="<span data-offset-key=4ndga-1-0 style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: normal; font-stretch: inherit; line-height: inherit; font-family: Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; vertical-align: baseline; border: 0px; color: rgb(105, 102, 255); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(35, 35, 52); text-decoration: none; text-align: center;><span data-text=true style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; border: 0px;>Beginner's Guide</span></span>" rel="noreferrer noopener">
+                                                                    <a href="https://etihad.arcube.io/" style="text-decoration: none;"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:normal;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#6966ff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;outline-color:initial;outline-style:none;outline-width:initial;text-decoration-line:none;background-color:rgb(0)"> EY-ZERO1 Collection</span></a></a>
+                                                                  <span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">.&nbsp;</span></div>
+                                                                <div style="font-family:inherit;text-align:center"><br></div>
+                                                                <div style="font-family:inherit;text-align:center"><br></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:17px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Find the unique code below, which you can use to claim your NFT on our website.</span></div>
+                                                                <div style="font-family:inherit;text-align:center"><br></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Unique Code: </span><a title="<span data-offset-key=105ak-1-0 style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: normal; font-stretch: inherit; line-height: inherit; font-family: Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; vertical-align: baseline; border: 0px; color: rgb(105, 102, 255); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(35, 35, 52); text-decoration: none; text-align: center;><span data-text=true style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; border: 0px;>help center</span></span>" rel="noreferrer noopener"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:normal;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#6966ff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;outline-color:initial;outline-style:none;outline-width:initial;text-decoration-line:none;background-color:rgb(0,0,0)">
+                                                                      <%=typeof unique_code!=='undefined'?unique_code:''%></span></a></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Unique Redemption Link: </span><a href="https://etihad.arcube.io/presale-checkout-4ec2cdf4d1479005f988327b76e4c5af" style="text-decoration: none;" title="<span data-offset-key=105ak-1-0 style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: normal; font-stretch: inherit; line-height: inherit; font-family: Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; vertical-align: baseline; border: 0px; color: rgb(105, 102, 255); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(35, 35, 52); text-decoration: none; text-align: center;><span data-text=true style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; border: 0px;>help center</span></span>" rel="noreferrer noopener"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:normal;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#6966ff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;outline-color:initial;outline-style:none;outline-width:initial;text-decoration-line:none;background-color:rgb(0,0,0)">Click Here to Redeem</span></a></div>
+                                                                <div style="font-family:inherit;text-align:center"><br></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">After redemption, NFTs will be sent to your wallet within 24 hours from the 21st July.</span></div>
+                                                                
+                                                                <div style="font-family:inherit;text-align:center"><br></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:17px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Join our community!</span></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Follow us on </span><span style="background-color:rgb(0,0,0)"> </span><a style="text-decoration: none;" href="https://www.twitter.com/etihadNFT" title="<span data-offset-key=105ak-5-0 style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: normal; font-stretch: inherit; line-height: inherit; font-family: Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; vertical-align: baseline; border: 0px; color: rgb(105, 102, 255); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(35, 35, 52); text-decoration: none; text-align: center;><span data-text=true style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; border: 0px;>Twitter</span></span>" rel="noreferrer noopener"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:normal;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#6966ff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;outline-color:initial;outline-style:none;outline-width:initial;text-decoration-line:none;background-color:rgb(0,0,0)">Twitter</span></a><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)"> and </span><a style="text-decoration: none;" href="https://discord.gg/hs6PJyHTJA"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#6966ff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Discord</span></a></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">Have more questions? Ask us </span><span style="background-color:rgb(0, 0, 0)"> </span><a style="text-decoration: none;" href="https://www.arcube.io/contact-us/" title="<span style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: normal; font-stretch: inherit; line-height: inherit; font-family: Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; vertical-align: baseline; border: 0px; color: rgb(105, 102, 255); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(35, 35, 52); text-decoration: none; text-align: center;><span data-text=true style=box-sizing: border-box; padding: 0px; margin: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; border: 0px;>Discord</span></span>" rel="noreferrer noopener"><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:normal;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#6966ff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;outline-color:initial;outline-style:none;outline-width:initial;text-decoration-line:none;background-color:rgb(0,0,0)">here</span></a><span style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;font-family:Lato,Helvetica,Arial,sans-serif;font-size:16px;vertical-align:baseline;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:initial;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;border-top-color:initial;border-right-color:initial;border-bottom-color:initial;border-left-color:initial;text-align:center;color:#ffffff;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text-decoration-style:initial;text-decoration-color:initial;background-color:rgb(0,0,0)">.&nbsp;</span></div>
+                                                                <div style="font-family:inherit;text-align:center"><br></div>
+                                                                <div style="font-family:inherit;text-align:center"><span style="background-color:rgb(19,19,30)"><em><strong><br>
+                                                                      </strong></em></span></div>
+                                                                <div></div>
+                                                              </div>
+                                                            </td>
+                                                          </tr>
+                                                          <center>
+                                                            <tr>
+                                                              <td style="font-size:6px;line-height:10px;padding:5px 5px 5px 5px" valign="top" align="center">
+                                                                <a href="https://etihad.arcube.io/ ">
+                                                                  <img border="0" style="display:block;color:rgb(0,0,0);text-decoration:none;font-family:Helvetica,arial,sans-serif;font-size:16px;width:600px;max-width:800px" alt="" src="https://arcubebucket1.s3.us-east-2.stackpathstorage.com/Banner-Greenliner.jpg" class="CToWUd" />
+                                                                </a>
+                                                              </td>
+                                                            </tr>
+                                                          </center>
+                                                        </tbody>
+                                                      </table>
+                                                      <div style="color:#aa23c5;font-size:12px;line-height:20px;padding:16px 16px 16px 16px;text-align:center">
+                                                        <div>
+                                                          <p style="font-size:12px;line-height:20px">Etihad x Arcube</p>
+                                                          <p style="font-size:12px;line-height:20px"><span></span> <span></span></p>
+                                                        </div>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                          </div>
+                        </center>
+                        <img src="https://ci3.googleusercontent.com/proxy/nGd94MZF9OM5Zy818USMhJw9ZD5CgVHpcPiuoa8sGtPnsHhXW12yce9G0D0SGSPEmGnd6BCJrjtv1cNBuuYgxGclV6t6wjJPCTMIHhseypmp4Gk5aswG6HMWrgbPAW3WG6ruLX4WqMbt9xqmicdjTBPs1nZj4yDBwsYk_wvcdfzX2oG4uRJnqDidKllcoSfbnIajnWY0rFo_zGgZ4bbub-lJTHzzL627sK4CFAJ-gG79kSdmEQMiNiTDiAW4HyN7lD5SDU9PPmLTnlWuINpk0038NFlOMO3ahf1EoNccE1OnjUnmjZlOUNVYx2ZwehLuSwvDh4q2EN8JWJm12ds27gxYSos0J5OHOgwOOvqJnZwG8L-6XDjm5T9uLNj3gsyXYVoZIj81WK2uv1o2vmy1hGDXHY6hia_UM70o4k5u-_1DZ-KvynHJs7Ay-_Cgs_MFxw7SJPcMquKeAGYUhqGneOBf2R_gQOgY_dPFWg_zllSMGpe8rzDdBNsp4C2tra-95LsbdZqB97iFevepSV52zBjbH2M41Xs-o0QXPG-tlmEcaGfhMiszJ2jQL4w3rhaYCvZgqRNYDnXvAciVGa4XFoGVhWrmdayB6W6loidlg8jusDLO9VnhE50H18llyTtfm6cIeZLxSXnyA4vCCG1AgkNHYroY4jXG-J1QHN115eFwNxiu7M6MwmwRpoiRQYWxxrTjrewOdViZKICvyemL0vP03RalOnsmX10TOBcajElEeM5EicZjSuDC67A8bvrrJxkTDmnouW7JfV4QP2QAR7GhBDzTWT9R3HOmi1OTuBXbpbiBzh38_Y44rYkY3Y69PttQlFj2U8G7cb1VvK8w5TNtMjzMEItZ3JmeiSYubJLy8SRjl8vc6rKTu2LUXhACNRPiW4FzP--WwUXWNiwvD8zDEwrym6F8cDBeFXK14JvBxg5YgZDpgjsNzzC1zR0wt8j5i7S75YpUNMFOetOrGWG1oRQfIl0ieQd5OjCqA8yhYaZUVXxdLLliv_HAJ0atn1mGHgN4fFPxsSbyaxiyIm9Edz6PKXDAI5svUreGXqcdSUzVGX32zmx6-nBKleIOQe0OJQop5fxZJt_h2QEZZswAUDxXIwx_AqzYy2l2jBuwANI0RtNNsruLD0eGLtxPLt4-A2xtFTYCQbCH4s9KRURi1Mk01LUE3pnr2a-IVxLO_V0RM9Tkm_5opFw1ZNeFr7E7T_P9Dh2MZDnM1vBHTX4o8O79xBh-fv_jmJawVu1PQmyjFc_E-j-o-sfXbLV4a5t_lu6pUlzsfkZ_48AstXudtlHXm4ZL2WK_U4qiYRZCQEeaoZv7zBrQIIk_=s0-d-e1-ft#http://url5082.dydx.exchange/wf/open?upn=ePYgH7Rck6FvKt-2FUkDGFsJyy2aRI37J48EAmwb9-2FufZB3BufyAHm0qomEVFNSl89NHf5pwmCF8N5LLJqS4V9BrzAbSrv-2FE8jCKte-2Bqko1fd1YpFHYtslefQwBqAOfB7PECzyb5AtfLaqY4hGgLAmxySfn5q6rfmE55noxjcmwirlPyZLaEZOYvYYw4LMGSIrHNklxc36jlCZ61GdqIY0mVYFfTRJmoYokDR2mv4oen-2Bj3zNVYt98q4TXb8HVurdRdgsPOhPPiO-2BkCaODhh6txoUBnkhiIOm4Vf3dsaNZyHwodarOx20eVxW427-2FyD857BIlyTX1-2B61-2B8FfmGodnqM05D-2FmbyGYMY02FB9HyPPkVbmDcEHhDQ2-2F3NJOdPTLdmEyyRaKmKbKcZwpq87jqgrCHbkL0MuEzeTObMKIP7Pl2f8O8oaj52Mgm4D7d12p4eICKEJ47TucbwCR5n01Wip6R7FH5p5ObT-2Fcp0QSPnmZZ-2FobnKA8uH3IloSa6Fp6pZgvUqWG3c-2Bdprmv0g7QduwjDILOyP-2B-2FsQBgl360NruYmCjC-2BnzUm3t2sIMLJGv0MnktZeVoPxPKlWtypnIlwoqVkDWe3OD2ZYpsdY1WusQEN8PNipTTM4VPU6pTcMFKZ7rhJj-2F4NTEQ56zn63eRB-2FQ5ZapB1Gj0HHNSO0cHabAdZ-2Bd5PQ5VEs5eaN11VnK3bFcrTnFZBVB9EhS4yqC8dBzeIizG6vqG-2F8rR2m0JCCFbvHcD2FjTQEZJAMHmJpqy1QKpSxEFjqP27-2BK0Cka02wM7BccZy1os0wK5zqh1PQX5qMath-2F2lrg1rADy0xVcghLOcfB8MRTqruJniOhKndlJXhttuvfeEpS9b8ue7xxNbazC2n-2FHUDCyoo9BEGDHDyE" alt="" width="1" height="1" border="0" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important" class="CToWUd">
+                      </div>
+                    </body>
+
+                  </html>
+                </div>
+              </div>
+              <%if(typeof unique_code !== 'undefined'){%>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <%}else{%>
+              <button type="submit" class="btn btn-primary" disabled>Submit</button>
+              <%}%>
+            </form>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </section>
+      <!-- /.content -->
+    </div>
+  </div>
+  <%- include('footer'); -%>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css">
+  <!-- <script>
+$(function() {
+    $(".chzn-select").chosen();
+});
+</script> -->
